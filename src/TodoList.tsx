@@ -9,7 +9,7 @@ const TodoList: React.FC<ITodoListProps> = ({ todos, deleteTodo, toggleTodo }) =
   return (
     <div>
       {todos.map((todo) => (
-        <TodoItem key={todo.id} {...{ deleteTodo, toggleTodo }} {...todo} />
+        <TodoItem key={todo.id} {...{ deleteTodo, toggleTodo, ...todo }} />
       ))}
     </div>
   );
